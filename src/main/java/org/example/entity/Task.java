@@ -9,6 +9,7 @@ public class Task {
     private Status status;
     private Priority priority;
 
+
     public Task(String project, String description, String assignee, Status status, Priority priority) {
         this.project = project;
         this.description = description;
@@ -37,6 +38,26 @@ public class Task {
         return priority;
     }
 
+    public void setProject(String project) {
+        this.project = project;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setAssignee(String assignee) {
+        this.assignee = assignee;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    public void setPriority(Priority priority) {
+        this.priority = priority;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -48,16 +69,5 @@ public class Task {
     @Override
     public int hashCode() {
         return Objects.hash(project, description);
-    }
-
-    @Override
-    public String toString() {
-        return "Task{" +
-                "project='" + project + '\'' +
-                ", description='" + description + '\'' +
-                ", assignee='" + assignee + '\'' +
-                ", status=" + status +
-                ", priority=" + priority +
-                '}';
     }
 }
